@@ -13,6 +13,9 @@ import FetchUsers from '../Pages/Users/FetchUsers';
 import Login from '../Pages/Login';
 import Register from '../Pages/Register';
 import FetchRideSchedule from '../Pages/Rides/FetchRideSchedule';
+import Revenue from '../Pages/Revenue/Revenue';
+import SearchRide from '../Pages/SearchRide';
+import RideDetails from '../Pages/Rides/RideDetails';
 
 const Navbar = () => {
     const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -36,7 +39,7 @@ const Navbar = () => {
                     <div className='mx-auto d-none d-lg-block'>
                         <SearchBar />
                     </div>
-                    <Link to='/login' className='navbar_button'>Login / Register</Link>
+                    <Link to='/login' className='navbar_button'>Login</Link>
                 </div>
             </nav>
 
@@ -44,13 +47,14 @@ const Navbar = () => {
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title>
                         <img src={express_shuttle_nav} alt='navbar_logo' className='navbar_img' />
-                        <span>Menu</span>
                     </Offcanvas.Title>
                 </Offcanvas.Header>
 
                 <Offcanvas.Body>
+                    <span className='offcanvas_span'>Menu</span>
                     <Link to="/" className="nav-link" onClick={handleClose}>Home</Link>
                     <Link to="/rides" className="nav-link" onClick={handleClose}>Rides</Link>
+                    <Link to="/revenue" className='nav-link' onClick={handleClose}>Revenue</Link>
                     <Link to="/ride_schedule" className='nav-link' onClick={handleClose}>Ride Schedules</Link>
                     <Link to="/locations" className='nav-link' onClick={handleClose}>Locations</Link>
                     <Link to="/messages" className="nav-link" onClick={handleClose}>Messages</Link>
@@ -68,8 +72,11 @@ const Navbar = () => {
                     <Route path='/messages' element={<Messages />} />
                     <Route path='/users' element={<FetchUsers />} />
                     <Route path='/login' element={<Login />} />
+                    <Route path='/revenue' element={<Revenue />} />
                     <Route path='/register' element={<Register />} />
                     <Route path='/ride_schedule' element={<FetchRideSchedule />} />
+                    <Route path='/search_ride/:key' element={<SearchRide />} />
+                    <Route path='/ride_details/:key' element={<RideDetails />} />
                 </Routes>
             </>
         </>

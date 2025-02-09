@@ -19,6 +19,7 @@ body{
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    letter-spacing: 1px;
 }
 
 ::selection {
@@ -86,6 +87,7 @@ body{
     font-size: 25px;
     font-weight: 550;
     padding: 10px 20px;
+    letter-spacing: 2px;
     border-radius: 5px;
     text-decoration: none;
     transition: 0.3s background-color;
@@ -96,12 +98,21 @@ body{
     color: #e5be5c;
 }
 
+.offcanvas_span{
+    font-size: 40px;
+    color: #e5be5c;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin: 3%;
+}
+
 .nav-link{
     color: #1A1A19;
     font-weight: 550;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-size: 30px;
     transition: color 0.7s;
+    margin: 3%;
 }
 
 .nav-link ::after{
@@ -157,11 +168,13 @@ body{
     position: absolute;
     top: 0;
     right: 0;
-    width: 60px;
+    width: 80px;
     height: 50px;
+    font-size: 18px;
     font-weight: bold;
     background: #e5be5c;
     color: #1A1A19;
+    letter-spacing: 2px;
     border: 0;
     border-radius: 0 7px 7px 0;
     cursor: pointer;
@@ -231,11 +244,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0 3rem 0;
+    margin: 2rem 0 3rem 0;
 }
   
 .footer-links li{
-    margin: 0 10px;
+    margin: 0 20px;
     color: #F4F4F4;
 }
   
@@ -294,7 +307,284 @@ body{
     color: #e5be5c !important;
     border-bottom: #e5be5c 2px solid !important;
 }
-  
+
+/* Search Rides Page */
+.search_page{
+    height: auto;
+    margin-bottom: 20%;
+}
+
+.search_data_img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 30px;
+    margin-bottom: 10%;
+}
+
+.search_data_img img{
+    width: 30%;
+    border-radius: 15px;
+    margin-top: 1%;
+}
+
+.search_data_img h3{
+    text-align: center;
+    color: #e5be5c;
+}
+
+.search_page_info{
+    text-align: center;
+    margin-top: 2%;
+}
+
+.search_page_info h2{
+    color: #e5be5c;
+}
+
+.search_data_container{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.search_data{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    width: 80%;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.box h4{
+    text-align: center;
+    font-size: 35px;
+    color: #e5be5c;
+}
+
+.box p{
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+}
+
+.box span{
+    font-weight: 500;
+    font-size: 20px;
+    color: #666;
+}
+
+.box_link{
+    margin-top: 3%;
+    color: #e5be5c;
+    font-size: 20px;
+    text-decoration: none;
+    transition: .3s;
+    text-align: center;
+}
+
+.box_link:hover{
+    text-decoration: underline;
+}
+
+/* Ride Details */
+.ride_info_container {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    padding: 2rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ride_info h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.ride_info span {
+    color: #e5be5c;
+}
+
+
+.ride_details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+}
+
+
+.ride_card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.ride_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ride_card h4 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    color: #e5be5c;
+}
+
+.ride_card p {
+    font-size: 1.3rem;
+    color: #666;
+    margin: 0.3rem 0;
+}
+
+.ride_card span {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ride_info h3 {
+        font-size: 1.8rem;
+    }
+
+    .ride_card {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ride_info h3 {
+        font-size: 1.5rem;
+    }
+
+    .ride_card {
+        padding: 0.8rem;
+    }
+
+    .ride_details{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* Users Page */
+/* General Styles */
+.users_container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    margin-bottom: 10%;
+    padding: 1rem;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.users_title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #e5be5c;
+    margin-bottom: 1.5rem;
+}
+
+/* Table Styles */
+.table_container {
+    overflow-x: auto;
+}
+
+.users_table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 1.3rem;
+}
+
+.users_table thead {
+    background: #e5be5c;
+    color: #F4F4F4;
+}
+
+.users_table th, .users_table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.users_table tbody tr:hover {
+    background: #f5f5f5;
+}
+
+/* Pagination */
+.pagination_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .users_title {
+        font-size: 1.5rem;
+    }
+
+    .users_table th, .users_table td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .users_title {
+        font-size: 1.3rem;
+    }
+
+    .users_table th, .users_table td {
+        padding: 6px;
+        font-size: 0.85rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 600px) {
     .footer_link{
       font-size: 1vh !important;
@@ -303,6 +593,9 @@ body{
       font-size: 1.1vh !important;
     }
 }
+
+
+
 
 
 
