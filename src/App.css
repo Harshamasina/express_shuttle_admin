@@ -98,6 +98,24 @@ body{
     color: #e5be5c;
 }
 
+.signout_button{
+    color: #1A1A19;
+    border:2px solid #d52d00;
+    background: transparent;
+    font-size: 25px;
+    font-weight: 550;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+
+.signout_button:hover{
+    background: #d52d00;
+    color: #F4F4F4;
+}
+
 .offcanvas_span{
     font-size: 40px;
     color: #e5be5c;
@@ -168,12 +186,11 @@ body{
     position: absolute;
     top: 0;
     right: 0;
-    width: 80px;
+    width: 120px;
     height: 50px;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 20px;
     background: #e5be5c;
-    color: #1A1A19;
+    color: #ffffff;
     letter-spacing: 2px;
     border: 0;
     border-radius: 0 7px 7px 0;
@@ -550,6 +567,125 @@ body{
     color: red;
     text-align: center;
     font-size: 1.2rem;
+}
+
+.login-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.login-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-container h2 {
+    color: #e5be5c;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.recaptcha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:  0 auto;
+    margin-top: 20px;
+}
+
+.login-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e5be5c;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.login-form button {
+    background: #e5be5c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.login-form button:hover {
+    background: #d1a949;
+}
+
+.login-form button:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+.error-text {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Home Page */
+.home_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-image: url(./assets/skyline.jpg);
+}
+
+.home_info img{
+    width: 60%;
+    border-radius: 10px;
+    height: 500px;
+}
+
+.home_info span{
+    color: #e5be5c;
+    font-size: 70px;
+    text-decoration: underline;
+}
+
+.home_info h1{
+    font-size: 100px;
+    color: #F4F4F4;
+    background: rgba(229, 190, 92, .9);
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-bottom: 3%;
+}
+
+.home_link{
+    color: #F4F4F4;
+    text-decoration: none;
+    font-size: 40px;
+    border: 2px solid #e5be5c;
+    padding: 15px 60px;
+    border-radius: 5px;
+    transition: .5s ease-in-out;
+}
+
+.home_link:hover{
+    background: #e5be5c;
+    color: #F4F4F4;
+    transform: scale(1.03);
 }
 
 /* Responsive Design */

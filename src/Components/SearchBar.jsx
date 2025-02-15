@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 
 const SearchBar = () => {
     const navigate = useNavigate();
@@ -30,7 +31,7 @@ const SearchBar = () => {
                     placeholder="Enter Ticket No or Payment Ref No or Account Email Phone and ID" 
                     required
                 />
-                <button className="search_btn" type="submit">Search</button>
+                <button className="search_btn" type="submit">Search <FaSearch /></button>
            </form>
         </>
     );
