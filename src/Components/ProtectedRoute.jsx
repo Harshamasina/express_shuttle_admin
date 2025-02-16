@@ -3,7 +3,7 @@ import { AuthContext } from "../Context/AuthContext";
 import { Navigate } from "react-router-dom";
 import { MutatingDots } from 'react-loader-spinner';
 
-const ProtectedRoute = () => {
+const ProtectedRoute = ({children}) => {
     const { currentUser, loading } = useContext(AuthContext);
     if(loading){
         return <MutatingDots
