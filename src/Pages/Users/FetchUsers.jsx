@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Pagination } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const FetchUsers = () => {
     const [userData, setUserData] = useState([]);
@@ -54,7 +55,7 @@ const FetchUsers = () => {
                                         <tr key={index}>
                                             <td>{user.name}</td>
                                             <td>{user.dob}</td>
-                                            <td>{user.email}</td>
+                                            <td><Link className="user_link" to={"/user_details/"+user.firebase_uid} >{user.email}</Link></td>
                                             <td>{user.phone}</td>
                                             <td>
                                                 {

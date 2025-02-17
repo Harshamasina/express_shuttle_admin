@@ -18,6 +18,7 @@ import RideDetails from '../Pages/Rides/RideDetails';
 import { AuthContext } from '../Context/AuthContext';
 import SignoutButton from './SignoutButton';
 import ProtectedRoute from './ProtectedRoute';
+import FetchUserDetails from '../Pages/Users/FetchUserDetails';
 
 const Navbar = () => {
     const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -90,6 +91,7 @@ const Navbar = () => {
                     <Route path='/rides' element={<ProtectedRoute><FetchRides /></ProtectedRoute>} />
                     <Route path='/messages' element={<ProtectedRoute><Messages /></ProtectedRoute>} />
                     <Route path='/users' element={<ProtectedRoute><FetchUsers /></ProtectedRoute>} />
+                    <Route path='/user_details/:uid' element={<ProtectedRoute><FetchUserDetails /></ProtectedRoute>} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/revenue' element={<ProtectedRoute><Revenue /></ProtectedRoute>} />
                     <Route path='/register' element={<ProtectedRoute><Register /></ProtectedRoute>} />
