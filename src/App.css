@@ -965,6 +965,33 @@ section h2{
     font-size: 25px;
 }
 
+/* Update Ride */
+.update_ride{
+    margin-top: 3%;
+}
+
+.update_ride_link_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.update_link{
+    color: #e5be5c;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 2px solid #e5be5c;
+    border-radius: 5px;
+    transition: .5s ease-in-out;
+}
+
+.update_link:hover{
+    background: #e5be5c;
+    color: #f4f4f4;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .users_title {

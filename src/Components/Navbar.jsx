@@ -19,6 +19,7 @@ import { AuthContext } from '../Context/AuthContext';
 import SignoutButton from './SignoutButton';
 import ProtectedRoute from './ProtectedRoute';
 import FetchUserDetails from '../Pages/Users/FetchUserDetails';
+import UpdateRide from '../Pages/Rides/UpdateRide';
 
 const Navbar = () => {
     const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -97,6 +98,7 @@ const Navbar = () => {
                     <Route path='/register' element={<ProtectedRoute><Register /></ProtectedRoute>} />
                     <Route path='/ride_schedule' element={<ProtectedRoute><FetchRideSchedule /></ProtectedRoute>} />
                     <Route path='/search_ride/:key' element={<ProtectedRoute><SearchRide /></ProtectedRoute>} />
+                    <Route path='/update_ride/:key' element={<ProtectedRoute><UpdateRide /></ProtectedRoute>} />
                     <Route path='/ride_details/:key' element={<ProtectedRoute><RideDetails /></ProtectedRoute>} />
                 </Routes>
             </>
