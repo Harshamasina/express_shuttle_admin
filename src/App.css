@@ -696,6 +696,19 @@ section h2{
     flex-direction: column;
 }
 
+.message_section span{
+    color: #e5be5c;
+    text-align: center;
+    margin-left: 47%;
+    font-size: 18px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.message_section span:hover{
+    text-decoration: underline 2px solid;
+}
+
 .users_table {
     width: 100%;
     border-collapse: collapse;
@@ -992,6 +1005,99 @@ section h2{
     color: #f4f4f4;
 }
 
+.update_ride_form_container {
+    background: #fdfdfd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 1rem auto;
+    margin-bottom: 5%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.update_ride_form_container p{
+    font-size: 25px;
+    font-weight: 600;
+    color: #e5be5c;
+}
+  
+/* Use CSS Grid for the form */
+.update_ride_form {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default for mobile */
+    gap: 1rem;
+}
+  
+@media (min-width: 768px) {
+    .update_ride_form {
+      grid-template-columns: 1fr 1fr; /* Two columns on tablets and larger */
+    }
+}
+  
+/* Each input group remains a flex column */
+.input_group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+  
+.input_group label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 20px;
+}
+  
+  /* Inputs, selects, buttons share styling */
+.input_group input,
+.input_group select {
+    padding: 0.5rem;
+    border: 1px solid #e5be5c;
+    border-radius: 4px;
+    font-size: 20px;
+}
+  
+.button_container button {
+    cursor: pointer;
+    background-color: #e5be5c;
+    color: #fff;
+    border: none;
+    transition: background-color 0.2s ease;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 25px;
+    border: none;
+    width: 50%;
+}
+  
+  /* Hover effect for button */
+.button_container button:hover {
+    background-color: #d1a949;
+}
+  
+  /* Center the button across the entire grid width */
+.button_container {
+    grid-column: 1 / -1; /* Span both columns */
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.err_msg{
+    color: #d52d00;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20%;
+}
+
+/* Responsive breakpoint: stack columns on smaller screens */
+@media (max-width: 768px) {
+    .update_ride_form {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .users_title {
@@ -1014,16 +1120,6 @@ section h2{
         font-size: 0.85rem;
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 600px) {
     .footer_link{

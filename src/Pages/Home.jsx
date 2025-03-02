@@ -7,7 +7,6 @@ const Home = () => {
 
     return (
         <section className="home_info">
-            <span>Hello Paul Mcrath!</span>
             <h1>Welcome to Express Shuttle Admin</h1>
             {
                 currentUser ? (
