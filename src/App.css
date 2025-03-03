@@ -697,15 +697,16 @@ section h2{
 }
 
 .message_section span{
-    color: #e5be5c;
+    color: #1A1A19;
     text-align: center;
     margin-left: 47%;
-    font-size: 18px;
-    transition: .5s ease-in-out;
+    font-size: 20px;
+    transition: .3s ease-in-out;
     cursor: pointer;
 }
 
 .message_section span:hover{
+    color: #e5be5c;
     text-decoration: underline 2px solid;
 }
 
@@ -745,13 +746,12 @@ section h2{
 
 .route-section h2{
     font-size: 35px;
+    text-decoration: underline;
 }
 
 .route-section h3{
     font-size: 30px;
     margin: 1%;
-    text-align: left !important;
-    text-decoration: underline;
 }
 
 .rides_table {
@@ -1142,6 +1142,29 @@ section h2{
         grid-template-columns: 1fr;
     }
 }
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+
+    #printableArea, #printableArea * {
+      visibility: visible;
+      font-size: 20px;
+    }
+
+    #printableArea {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    #print-title{
+        font-size: 30px;
+        text-align: center;
+    }
+}
+  
 
 /* Responsive Design */
 @media (max-width: 768px) {
