@@ -10,7 +10,6 @@ import FetchRides from '../Pages/Rides/FetchRides';
 import Messages from '../Pages/Messages';
 import FetchUsers from '../Pages/Users/FetchUsers';
 import Login from '../Pages/Login';
-import Register from '../Pages/Register';
 import FetchRideSchedule from '../Pages/Rides/FetchRideSchedule';
 import Revenue from '../Pages/Revenue/Revenue';
 import SearchRide from '../Pages/SearchRide';
@@ -20,6 +19,8 @@ import SignoutButton from './SignoutButton';
 import ProtectedRoute from './ProtectedRoute';
 import FetchUserDetails from '../Pages/Users/FetchUserDetails';
 import UpdateRide from '../Pages/Rides/UpdateRide';
+import MyAccount from '../Pages/Admins/MyAccount';
+import Register from '../Pages/Admins/Register';
 
 const Navbar = () => {
     const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -56,7 +57,7 @@ const Navbar = () => {
                     }
                     {
                         currentUser ? (
-                            <SignoutButton />
+                            <Link to='/my_account' className='navbar_button'>My Account</Link>
                         ) : (
                             <Link to='/login' className='navbar_button'>Login</Link>
                         )
@@ -80,6 +81,7 @@ const Navbar = () => {
                         <Link to="/ride_schedule" className='nav-link' onClick={handleClose}>Ride Schedules</Link>
                         <Link to="/messages" className="nav-link" onClick={handleClose}>Messages</Link>
                         <Link to="/users" className="nav-link" onClick={handleClose}>Users</Link>
+                        <Link to="/register" className='nav-link' onClick={handleClose}>Register Admin</Link>
                     </Offcanvas.Body>
                 </Offcanvas>
             )}
@@ -94,8 +96,9 @@ const Navbar = () => {
                     <Route path='/users' element={<ProtectedRoute><FetchUsers /></ProtectedRoute>} />
                     <Route path='/user_details/:uid' element={<ProtectedRoute><FetchUserDetails /></ProtectedRoute>} />
                     <Route path='/login' element={<Login />} />
-                    <Route path='/revenue' element={<ProtectedRoute><Revenue /></ProtectedRoute>} />
                     <Route path='/register' element={<ProtectedRoute><Register /></ProtectedRoute>} />
+                    <Route path='/my_account' element={<ProtectedRoute><MyAccount /></ProtectedRoute>} />
+                    <Route path='/revenue' element={<ProtectedRoute><Revenue /></ProtectedRoute>} />
                     <Route path='/ride_schedule' element={<ProtectedRoute><FetchRideSchedule /></ProtectedRoute>} />
                     <Route path='/search_ride/:key' element={<ProtectedRoute><SearchRide /></ProtectedRoute>} />
                     <Route path='/update_ride/:key' element={<ProtectedRoute><UpdateRide /></ProtectedRoute>} />

@@ -99,6 +99,7 @@ const Login = () => {
                     {error && <p className="error-text">{error}</p>}
                 </div>
                 <div id="recaptcha-container" className="recaptcha"></div>
+                
             </div>
         </section>
     );
