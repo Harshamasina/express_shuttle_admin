@@ -1,14 +1,29 @@
 import React, { useState, useEffect } from "react";
 import { auth, RecaptchaVerifier, signInWithPhoneNumber } from "../Config/Firebase";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
     const [phone, setPhone] = useState("");
     const [otp, setOtp] = useState("");
+    const [numbers, setNumbers] = useState([]);
     const [confirmationResult, setConfirmationResult] = useState(null);
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
+
+    useEffect(() => {
+        const fetchEmpData = async () => {
+            try{
+                const res = await axios.get(`${import.meta.env.VITE_LOCAL_API_URL}/api/fetch_admins_no`);
+                setNumbers(res.data);
+            } catch (err) {
+                console.err(err);
+                setError(err.response?.data?.message);
+            }
+        };
+        fetchEmpData();
+    }, []);
 
     useEffect(() => {
         if (!window.recaptchaVerifier) {
@@ -31,6 +46,12 @@ const Login = () => {
 
         if (!phone || !/^\+\d{10,15}$/.test(phone)) {
             setError("Enter a valid phone number with country code (e.g., +1234567890)");
+            return;
+        }
+
+        const numMatch = numbers.find((num) => num === phone)
+        if (!numMatch) {
+            setError("Invalid Credentials. Please check Phone Number");
             return;
         }
 

@@ -9,8 +9,6 @@ const MyAccount = () => {
     const [loading, setLoading] = useState(true);
     const [account, setAccount] = useState(null);
     const { currentUser } = useContext(AuthContext);
-    console.log(currentUser?.uid);
-    console.log(currentUser?.phoneNumber)
 
     useEffect(() => {
         const fetchData = async () => {
