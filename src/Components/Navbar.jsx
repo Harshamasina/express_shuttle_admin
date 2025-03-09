@@ -21,6 +21,7 @@ import FetchUserDetails from '../Pages/Users/FetchUserDetails';
 import UpdateRide from '../Pages/Rides/UpdateRide';
 import MyAccount from '../Pages/Admins/MyAccount';
 import Register from '../Pages/Admins/Register';
+import EmailLogin from '../Pages/EmailLogin';
 
 const Navbar = () => {
     const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -96,6 +97,7 @@ const Navbar = () => {
                     <Route path='/users' element={<ProtectedRoute><FetchUsers /></ProtectedRoute>} />
                     <Route path='/user_details/:uid' element={<ProtectedRoute><FetchUserDetails /></ProtectedRoute>} />
                     <Route path='/login' element={<Login />} />
+                    <Route path='/email_login' element={<EmailLogin />} />
                     <Route path='/register' element={<ProtectedRoute><Register /></ProtectedRoute>} />
                     <Route path='/my_account' element={<ProtectedRoute><MyAccount /></ProtectedRoute>} />
                     <Route path='/revenue' element={<ProtectedRoute><Revenue /></ProtectedRoute>} />

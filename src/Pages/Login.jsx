@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { auth, RecaptchaVerifier, signInWithPhoneNumber } from "../Config/Firebase";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [phone, setPhone] = useState("");
@@ -99,7 +99,7 @@ const Login = () => {
                     {error && <p className="error-text">{error}</p>}
                 </div>
                 <div id="recaptcha-container" className="recaptcha"></div>
-                
+                <Link className="login_email" to="/email_login">Login with Email and Password</Link>
             </div>
         </section>
     );
