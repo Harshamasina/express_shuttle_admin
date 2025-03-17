@@ -52,7 +52,7 @@ const RideDetails = () => {
                     {/* Trip Details */}
                     <div className="ride_card">
                         <h4>Trip Information</h4>
-                        <p><span>From:</span> {rideData.from_location} → {rideData.to_location}</p>
+                        <p><span>Route:</span> {rideData.from_location} → {rideData.to_location}</p>
                         <p><span>Pick-up:</span> {rideData.pick_up} at {rideData.pick_up_time} on {rideData.pick_up_date}</p>
                         <p><span>Drop-off:</span> {rideData.drop_off}</p>
                         {rideData.trip_type === "return" && (

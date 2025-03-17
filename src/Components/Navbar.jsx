@@ -10,7 +10,7 @@ import FetchRides from '../Pages/Rides/FetchRides';
 import Messages from '../Pages/Messages';
 import FetchUsers from '../Pages/Users/FetchUsers';
 import Login from '../Pages/Login';
-import FetchRideSchedule from '../Pages/Rides/FetchRideSchedule';
+import FetchRideSchedule from '../Pages/Schedules/FetchRideSchedule';
 import Revenue from '../Pages/Revenue/Revenue';
 import SearchRide from '../Pages/SearchRide';
 import RideDetails from '../Pages/Rides/RideDetails';

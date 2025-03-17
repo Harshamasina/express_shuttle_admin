@@ -2,6 +2,7 @@ import SignoutButton from "../../Components/SignoutButton";
 import { useContext } from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import moment from "moment";
 import { AuthContext } from '../../Context/AuthContext';
 import { MutatingDots } from "react-loader-spinner";
 
@@ -69,7 +70,7 @@ const MyAccount = () => {
                                             <h6 className="mb-0">Date of Birth</h6>
                                         </div>
                                         <div className="col-sm-9 text-secondary">
-                                            <p>{account[0]?.dob}</p>
+                                            <p>{moment(account[0]?.dob).format('YYYY-MM-DD')}</p>
                                         </div>
                                     </div>
                                     <hr />
