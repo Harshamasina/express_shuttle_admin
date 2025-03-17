@@ -42,9 +42,9 @@ const FetchRideSchedule = () => {
                             <h3>{route?.ride}</h3>
                         </div>
 
-                        <div className="update_ride_link_container">
+                        {/* <div className="update_ride_link_container">
                             <Link className="update_link" to={"/update_route/"+route._id}><FaRegEdit /> Update Route</Link>
-                        </div>
+                        </div> */}
 
                         <div className="ride_details">
                             <div className="ride_card">

@@ -1,6 +1,6 @@
-import CurrentRevenue from "../../Components/CurrentRevenue";
-import CustomRevenue from "../../Components/CustomRevenue";
-import FetchMonthRevenue from "../../Components/FetchMonthRevenue";
+import CurrentRevenue from "./CurrentRevenue";
+import CustomRevenue from "./CustomRevenue";
+import FetchMonthRevenue from "./FetchMonthRevenue";
 
 const Revenue = () => {
     return (
