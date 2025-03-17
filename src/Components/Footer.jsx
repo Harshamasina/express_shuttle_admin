@@ -21,7 +21,8 @@ const Footer = () => {
                             <li><Nav.Link className='footer_link' as={Link} to="/home" eventKey="0">Home</Nav.Link></li>
                             <li><Nav.Link className='footer_link' as={Link} to="/rides" eventKey="1">Rides</Nav.Link></li>
                             <li><Nav.Link className='footer_link' as={Link} to="/revenue" eventKey="2">Revenue</Nav.Link></li>
-                            <li><Nav.Link className='footer_link' as={Link} to="/ride_schedule" eventKey="3">Schedules</Nav.Link></li>
+                            <li><Nav.Link className='footer_link' as={Link} to="/costs" eventKey="3">Costs</Nav.Link></li>
+                            <li><Nav.Link className='footer_link' as={Link} to="/ride_schedule" eventKey="4">Schedules</Nav.Link></li>
                             <li><Nav.Link className='footer_link' as={Link} to="/messages" eventKey="5">Messages</Nav.Link></li>
                             <li><Nav.Link className='footer_link' as={Link} to="/users" eventKey="6">Users</Nav.Link></li>
                         </ul>

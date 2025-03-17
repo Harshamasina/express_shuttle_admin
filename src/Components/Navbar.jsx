@@ -22,6 +22,8 @@ import UpdateRide from '../Pages/Rides/UpdateRide';
 import MyAccount from '../Pages/Admins/MyAccount';
 import Register from '../Pages/Admins/Register';
 import EmailLogin from '../Pages/EmailLogin';
+import FetchRideCosts from '../Pages/Costs/FetchRideCosts';
+import UpdateRideCost from '../Pages/Costs/UpdateRideCost';
 
 const Navbar = () => {
     const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -79,6 +81,7 @@ const Navbar = () => {
                         <Link to="/" className="nav-link" onClick={handleClose}>Home</Link>
                         <Link to="/rides" className="nav-link" onClick={handleClose}>Rides</Link>
                         <Link to="/revenue" className='nav-link' onClick={handleClose}>Revenue</Link>
+                        <Link to="/costs" className='nav-link' onClick={handleClose}>Costs</Link>
                         <Link to="/ride_schedule" className='nav-link' onClick={handleClose}>Ride Schedules</Link>
                         <Link to="/messages" className="nav-link" onClick={handleClose}>Messages</Link>
                         <Link to="/users" className="nav-link" onClick={handleClose}>Users</Link>
@@ -101,6 +104,8 @@ const Navbar = () => {
                     <Route path='/register' element={<ProtectedRoute><Register /></ProtectedRoute>} />
                     <Route path='/my_account' element={<ProtectedRoute><MyAccount /></ProtectedRoute>} />
                     <Route path='/revenue' element={<ProtectedRoute><Revenue /></ProtectedRoute>} />
+                    <Route path='/costs' element={<ProtectedRoute><FetchRideCosts /></ProtectedRoute>} />
+                    <Route path='/update_ride_cost/:id' element={<ProtectedRoute><UpdateRideCost /></ProtectedRoute>} />
                     <Route path='/ride_schedule' element={<ProtectedRoute><FetchRideSchedule /></ProtectedRoute>} />
                     <Route path='/search_ride/:key' element={<ProtectedRoute><SearchRide /></ProtectedRoute>} />
                     <Route path='/update_ride/:key' element={<ProtectedRoute><UpdateRide /></ProtectedRoute>} />

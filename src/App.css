@@ -520,6 +520,13 @@ section h2{
     /* text-decoration: underline; */
 }
 
+section h3{
+    font-size: 35px;
+    text-align: center;
+    margin-top: 2%;
+    color: #e5be5c;
+}
+
 .msg_buttons{
     display: flex;
     justify-content: center;
@@ -1231,6 +1238,107 @@ section h2{
 
 .signup-btn:hover{
     background: #3a464e;
+}
+
+.revenue_container{
+    display: flex;
+    margin: 0 auto;
+    width: 65%;
+    justify-content: space-between;
+}
+
+.revenue_box{
+    border: 2px solid #e5be5c;
+    padding: 50px 50px;
+    border-radius: 10px;
+    width: 375px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.revenue_box h3{
+    text-align: center;
+    font-size: 30px;
+    color: #e5be5c;
+}
+
+.revenue_box span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+.revenue_input{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    gap: 10px;
+}
+
+.revenue_input label{
+    font-size: 25px;
+}
+
+.revenue_input input{
+    border: 2px solid #e5be5c;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    background: none;
+}
+
+.revenue_inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 2%;
+}
+
+.revenue_button{
+    display: flex;
+    margin: 0 auto;
+    padding: 10px 40px;
+    font-size: 20px;
+    background: transparent;
+    border: 2px solid #e5be5c;
+    color: #e5be5c;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+    margin-bottom: 2%;
+}
+
+.revenue_button:hover{
+    background: #e5be5c;
+    color: #f4f4f4;
+}
+
+.revenue_info{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 2%;
+    font-size: 25px;
+}
+
+.error{
+    text-align: center;
+    margin-top: 1%;
+    font-size: 20px;
+    color: #d52d00;
+}
+
+/* Ride Costs */
+.ride_costs_table{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 10%;
+}
+
+.users_table th, .users_table td{
+    text-align: center;
 }
 
 /* Responsive adjustments */
