@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import moment from "moment";
 
 const UpdateRide = () => {
     const { key } = useParams();
@@ -91,6 +92,29 @@ const UpdateRide = () => {
 
     const handleUpdate = async (e) => {
         e.preventDefault();
+
+        const today = moment().startOf('day');
+        const pickUpDate = moment(updateRide.pick_up_date).startOf('day');
+
+        if(pickUpDate.isBefore(today)){
+            setErrMsg("Pick-Up Date cannot be before today.");
+            return
+        }
+
+        if(rideDetails.trip_type === 'return'){
+            const returnPickUpDate = moment(updateRide.return_pick_up_date).startOf('day');
+
+            if(returnPickUpDate.isBefore(today)){
+                setErrMsg("Return Pick-Up Date cannot be before today.");
+                return
+            }
+
+            if(returnPickUpDate.isBefore(pickUpDate)){
+                setErrMsg("Return Pick-Up Date cannot be before the Pick-Up Date.");
+                return
+            }
+        }
+
         const isConfirmed = window.confirm("Are you sure you want to update?");
         if (!isConfirmed) return;
 
