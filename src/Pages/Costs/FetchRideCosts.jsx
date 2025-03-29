@@ -50,7 +50,7 @@ const FetchRideCosts = () => {
                                 <th>From Location</th>
                                 <th>To Location</th>
                                 <th>One Way</th>
-                                <th>Return</th>
+                                <th>Two Way</th>
                                 <th>Tax Rate</th>
                                 <th>Update Ride</th>
                             </tr>
